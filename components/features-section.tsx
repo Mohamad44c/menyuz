@@ -1,4 +1,4 @@
-import { Palette, QrCode, Link2, PencilLine, CreditCard } from "lucide-react"
+import { Palette, QrCode, Link2, PencilLine, CreditCard, Images, Layers } from "lucide-react"
 
 const features = [
   {
@@ -12,6 +12,11 @@ const features = [
     description: "PNG + PDF, print-ready for tables and displays",
   },
   {
+    icon: Layers,
+    title: "Plexi glass table stands",
+    description: "Optional add-on: QR code printed on sleek plexi glass stands for your tables — just $6 per piece",
+  },
+  {
     icon: Link2,
     title: "Your own link",
     description: "Clean URL or custom domain support available",
@@ -20,6 +25,11 @@ const features = [
     icon: PencilLine,
     title: "Easy self-editing",
     description: "No tech skills needed — update anytime",
+  },
+  {
+    icon: Images,
+    title: "Unlimited images",
+    description: "Add as many photos as you need — showcase every dish",
   },
   {
     icon: CreditCard,
