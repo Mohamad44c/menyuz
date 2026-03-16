@@ -5,11 +5,40 @@ import "./globals.css";
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
+const siteUrl = "https://menyuz.vercel.app";
+const siteTitle = "Menyuz — Digital QR Menus for Restaurants in Lebanon";
+const siteDescription =
+  "Beautiful, scannable QR menus for cafes and restaurants. One-time payment, no subscriptions. Made in Beirut.";
+
 export const metadata: Metadata = {
-  title: "Menyuz — Digital QR Menus for Restaurants in Lebanon",
-  description:
-    "Beautiful, scannable QR menus for cafes and restaurants. One-time payment, no subscriptions. Made in Beirut.",
-  generator: "v0.app",
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
+  keywords: [
+    "QR menu",
+    "digital menu",
+    "restaurant menu Lebanon",
+    "digital menu Beirut",
+    "QR code menu restaurant",
+    "online menu for cafe",
+    "contactless menu",
+  ],
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: siteTitle,
+    description: siteDescription,
+    url: siteUrl,
+    siteName: "Menyuz",
+    locale: "en_US",
+    type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Menyuz — Digital QR Menus" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    images: ["/og-image.png"],
+  },
   icons: {
     icon: [
       {

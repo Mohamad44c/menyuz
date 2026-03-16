@@ -20,9 +20,22 @@ export function Footer() {
           {/* Location */}
           <p className="text-sm text-background/50">Made in Beirut</p>
 
+          {/* Powered by */}
+          <p className="text-sm text-background/40">
+            Powered by{" "}
+            <Link
+              href="https://www.nexus-techlb.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-background/60 underline underline-offset-2 transition-colors hover:text-background"
+            >
+              Nexus
+            </Link>
+          </p>
+
           {/* WhatsApp link */}
           <Link
-            href="https://wa.me/96170123456"
+            href="https://wa.me/96178830254"
             className="inline-flex items-center gap-2 text-sm text-background/70 transition-colors hover:text-background"
           >
             <svg
