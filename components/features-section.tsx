@@ -1,4 +1,4 @@
-import { Palette, QrCode, Link2, PencilLine, CreditCard, Images, Layers } from "lucide-react"
+import { Palette, QrCode, Link2, PencilLine, CreditCard, Images, Layers, Languages, DollarSign, Sun } from "lucide-react"
 
 const features = [
   {
@@ -14,7 +14,7 @@ const features = [
   {
     icon: Layers,
     title: "Plexi glass table stands",
-    description: "Optional add-on: QR code printed on sleek plexi glass stands for your tables — just $6 per piece",
+    description: "Optional add-on: QR code printed on sleek plexi glass stands for your tables - contact us for more details",
   },
   {
     icon: Link2,
@@ -30,6 +30,21 @@ const features = [
     icon: Images,
     title: "Unlimited images",
     description: "Add as many photos as you need — showcase every dish",
+  },
+  {
+    icon: Languages,
+    title: "Translate your menu into any language",
+    description: "Reach every guest — display your menu in English, Arabic, French, or any language you need",
+  },
+  {
+    icon: DollarSign,
+    title: "Show prices in any currency",
+    description: "Display your prices in USD, EUR, LBP, or any other currency — perfect for tourists and international visitors",
+  },
+  {
+    icon: Sun,
+    title: "Light & dark mode that matches your brand",
+    description: "Your menu looks great day or night — choose a light or dark color theme that fits your restaurant's style",
   },
   {
     icon: CreditCard,
