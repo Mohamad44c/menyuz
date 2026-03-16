@@ -9,6 +9,8 @@ const included = [
   "Admin access to edit anytime",
   "48-hour delivery",
   "Free minor revisions",
+  "Training session included",
+  "Lifetime support",
 ]
 
 export function PricingSection() {

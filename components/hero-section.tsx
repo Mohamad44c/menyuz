@@ -34,7 +34,7 @@ export function HeroSection() {
             </Link>
           </Button>
           <Link
-            href="#demo"
+            href="https://menyuz-demo.vercel.app/"
             className="inline-flex items-center gap-1 text-base font-medium text-primary transition-colors hover:text-primary/80"
           >
             See a live demo
