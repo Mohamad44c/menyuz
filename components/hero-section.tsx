@@ -7,9 +7,9 @@ import Link from "next/link"
 
 export function HeroSection() {
   const typewriterWords = [
-    "a better menu",
-    "better customer experience",
-    "stronger branding",
+    "a better digital catalog",
+    "a smoother customer journey",
+    "stronger brand presence",
   ]
   const [wordIndex, setWordIndex] = useState(0)
   const [displayedWord, setDisplayedWord] = useState("")
@@ -53,7 +53,7 @@ export function HeroSection() {
 
         {/* Headline */}
         <h1 className="mb-6 text-balance text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl">
-          <span className="block">Your restaurant deserves</span>
+          <span className="block">Your business deserves</span>
           <span
             aria-live="polite"
             className="mt-2 flex min-h-[1.25em] justify-center text-primary md:min-h-[1.15em]"
@@ -67,14 +67,14 @@ export function HeroSection() {
 
         {/* Subheadline */}
         <p className="mx-auto mb-10 max-w-2xl text-pretty text-lg text-muted-foreground md:text-xl">
-          We build beautiful, scannable QR menus for cafes and restaurants. You focus on the food — we handle the rest.
+          We create beautiful, scannable QR menus and catalogs for businesses worldwide. You focus on serving your customers - we handle the digital experience.
         </p>
 
         {/* CTAs */}
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Button asChild size="lg" className="h-12 px-8 text-base font-medium">
             <Link href="https://wa.me/96170123456">
-              Get your menu — Request a quote
+              Get your digital catalog - Request a quote
             </Link>
           </Button>
           <Link
@@ -100,7 +100,7 @@ export function HeroSection() {
                 <Smartphone className="h-8 w-8 text-muted-foreground" />
                 <div className="text-left">
                   <p className="text-sm font-medium text-foreground">Scan & Browse</p>
-                  <p className="text-sm text-muted-foreground">Instant access to your menu</p>
+                  <p className="text-sm text-muted-foreground">Instant access to your content</p>
                 </div>
               </div>
             </div>
