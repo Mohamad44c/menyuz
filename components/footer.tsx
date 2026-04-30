@@ -21,13 +21,13 @@ export function Footer() {
           <p className="text-sm text-background/50">Made in Beirut</p>
 
           {/* Powered by */}
-          <p className="text-sm text-background/40">
+          <p className="text-sm font-medium text-background/85">
             Powered by{" "}
             <Link
               href="https://www.nexus-techlb.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-background/60 underline underline-offset-2 transition-colors hover:text-background"
+              className="inline-flex items-center rounded-md border border-[#f7c948]/70 bg-[#f7c948]/15 px-2 py-0.5 text-[#f7c948] shadow-[0_0_0_1px_rgba(247,201,72,0.15)] transition-colors hover:bg-[#f7c948]/25 hover:text-[#ffe08a]"
             >
               Nexus
             </Link>

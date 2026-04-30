@@ -1,10 +1,45 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { QrCode, Smartphone } from "lucide-react"
 import Link from "next/link"
 
 export function HeroSection() {
+  const typewriterWords = [
+    "a better menu",
+    "better customer experience",
+    "stronger branding",
+  ]
+  const [wordIndex, setWordIndex] = useState(0)
+  const [displayedWord, setDisplayedWord] = useState("")
+  const [isDeleting, setIsDeleting] = useState(false)
+
+  useEffect(() => {
+    const currentWord = typewriterWords[wordIndex]
+    const typingSpeed = isDeleting ? 50 : 90
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting && displayedWord === currentWord) {
+        setTimeout(() => setIsDeleting(true), 900)
+        return
+      }
+
+      if (isDeleting && displayedWord === "") {
+        setIsDeleting(false)
+        setWordIndex((prev) => (prev + 1) % typewriterWords.length)
+        return
+      }
+
+      const nextValue = isDeleting
+        ? currentWord.slice(0, displayedWord.length - 1)
+        : currentWord.slice(0, displayedWord.length + 1)
+      setDisplayedWord(nextValue)
+    }, typingSpeed)
+
+    return () => clearTimeout(timeout)
+  }, [displayedWord, isDeleting, typewriterWords, wordIndex])
+
   return (
     <section className="relative bg-background px-4 py-20 md:py-32">
       <div className="mx-auto max-w-4xl text-center">
@@ -18,7 +53,16 @@ export function HeroSection() {
 
         {/* Headline */}
         <h1 className="mb-6 text-balance text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl">
-          Your restaurant deserves a better menu
+          <span className="block">Your restaurant deserves</span>
+          <span
+            aria-live="polite"
+            className="mt-2 flex min-h-[1.25em] justify-center text-primary md:min-h-[1.15em]"
+          >
+            <span className="inline-block min-w-[20ch] text-center">
+              {displayedWord}
+              <span className="animate-pulse text-foreground">|</span>
+            </span>
+          </span>
         </h1>
 
         {/* Subheadline */}
@@ -30,7 +74,7 @@ export function HeroSection() {
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Button asChild size="lg" className="h-12 px-8 text-base font-medium">
             <Link href="https://wa.me/96170123456">
-              Get your menu — $200
+              Get your menu — Request a quote
             </Link>
           </Button>
           <Link

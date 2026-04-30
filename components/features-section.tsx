@@ -1,4 +1,4 @@
-import { Palette, QrCode, Link2, PencilLine, CreditCard, Images, Layers, Languages, DollarSign, Sun } from "lucide-react"
+import { Palette, QrCode, Link2, PencilLine, CreditCard, Images, Layers, Languages, DollarSign, Sun, MapPin } from "lucide-react"
 
 const features = [
   {
@@ -47,6 +47,11 @@ const features = [
     description: "Your menu looks great day or night — choose a light or dark color theme that fits your restaurant's style",
   },
   {
+    icon: MapPin,
+    title: "Multi-location support",
+    description: "Manage separate menus for each branch while keeping the same consistent brand experience",
+  },
+  {
     icon: CreditCard,
     title: "One-time payment",
     description: "No subscriptions, no hidden fees",
@@ -66,11 +71,11 @@ export function FeaturesSection() {
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="grid gap-4 sm:grid-cols-2">
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="flex items-start gap-4 rounded-xl border-l-4 border-primary bg-secondary/50 p-5 transition-colors hover:bg-secondary"
+              className="flex h-full items-start gap-4 rounded-xl border border-border bg-secondary/50 p-5 transition-colors hover:bg-secondary"
             >
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
                 <feature.icon className="h-5 w-5 text-primary" />

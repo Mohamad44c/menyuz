@@ -24,7 +24,7 @@ export function PricingSection() {
               One-time setup
             </p>
             <div className="flex items-baseline justify-center gap-1">
-              <span className="text-5xl font-bold text-primary-foreground">$200</span>
+              <span className="text-5xl font-bold text-primary-foreground">Request a quote</span>
             </div>
           </div>
 
