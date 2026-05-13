@@ -73,7 +73,7 @@ export function HeroSection() {
         {/* CTAs */}
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Button asChild size="lg" className="h-12 px-8 text-base font-medium">
-            <Link href="https://wa.me/96170123456">
+            <Link href="https://wa.me/96178830254">
               Get your digital catalog - Request a quote
             </Link>
           </Button>

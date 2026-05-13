@@ -42,7 +42,7 @@ export function PricingSection() {
             </ul>
 
             <Button asChild size="lg" className="w-full h-12 text-base font-medium">
-              <Link href="https://wa.me/96170123456">
+              <Link href="https://wa.me/96178830254">
                 Order now via WhatsApp
               </Link>
             </Button>
