@@ -19,12 +19,14 @@ export function PricingSection() {
       <div className="mx-auto max-w-xl">
         <div className="overflow-hidden rounded-3xl border border-border bg-background shadow-lg">
           {/* Header */}
-          <div className="bg-primary px-8 py-10 text-center">
+          <div className="bg-primary px-6 py-10 text-center sm:px-8">
             <p className="mb-2 text-sm font-medium uppercase tracking-wider text-primary-foreground/80">
               One-time setup
             </p>
             <div className="flex items-baseline justify-center gap-1">
-              <span className="text-5xl font-bold text-primary-foreground">Request a quote</span>
+              <span className="text-balance text-3xl font-bold text-primary-foreground sm:text-4xl md:text-5xl">
+                Request a quote
+              </span>
             </div>
           </div>
 

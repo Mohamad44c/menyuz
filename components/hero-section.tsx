@@ -56,9 +56,9 @@ export function HeroSection() {
           <span className="block">Your business deserves</span>
           <span
             aria-live="polite"
-            className="mt-2 flex min-h-[1.25em] justify-center text-primary md:min-h-[1.15em]"
+            className="mt-2 flex min-h-[2.4em] items-start justify-center text-primary sm:min-h-[1.25em] md:min-h-[1.15em]"
           >
-            <span className="inline-block min-w-[20ch] text-center">
+            <span className="block max-w-full text-balance text-center">
               {displayedWord}
               <span className="animate-pulse text-foreground">|</span>
             </span>
