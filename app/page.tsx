@@ -1,3 +1,4 @@
+import { Navbar } from "@/components/navbar";
 import { HeroSection } from "@/components/hero-section";
 import { HowItWorksSection } from "@/components/how-it-works-section";
 import { FeaturesSection } from "@/components/features-section";
@@ -28,7 +29,8 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <main className="min-h-screen">
+      <Navbar />
+      <main className="min-h-screen bg-[#080810]">
         <HeroSection />
         <HowItWorksSection />
         <FeaturesSection />

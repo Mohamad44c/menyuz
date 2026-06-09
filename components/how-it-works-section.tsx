@@ -1,4 +1,8 @@
-import { Send, Sparkles, QrCode } from "lucide-react"
+import { Send, Sparkles, QrCode } from "lucide-react";
+import { GlassCard } from "@/components/ui/glass-card";
+import { SectionBadge } from "@/components/ui/section-badge";
+import { GradientText } from "@/components/ui/gradient-text";
+import { Reveal } from "@/components/ui/reveal";
 
 const steps = [
   {
@@ -19,43 +23,50 @@ const steps = [
     title: "You're live",
     description: "You get a QR code and login to edit anytime",
   },
-]
+];
 
 export function HowItWorksSection() {
   return (
-    <section className="bg-secondary px-4 py-20 md:py-28">
+    <section
+      id="how-it-works"
+      className="bg-[#0E0E1A] px-4 py-20 md:py-28"
+    >
       <div className="mx-auto max-w-6xl">
-        <div className="mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl">
-            How it works
+        <Reveal className="text-center mb-4 flex justify-center">
+          <SectionBadge>Simple process</SectionBadge>
+        </Reveal>
+        <Reveal delay={0.1} className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold leading-tight text-[#F0F0F8]">
+            How it <GradientText>works</GradientText>
           </h2>
-          <p className="text-muted-foreground">
+          <p className="mt-4 text-base leading-relaxed text-[#9898B0]">
             Three simple steps to your digital menu
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid gap-8 md:grid-cols-3">
-          {steps.map((step) => (
-            <div
-              key={step.number}
-              className="relative rounded-2xl bg-background p-8 shadow-sm transition-shadow hover:shadow-md"
-            >
-              <div className="mb-6 flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
-                  <step.icon className="h-6 w-6 text-primary" />
+          {steps.map((step, i) => (
+            <Reveal key={step.number} delay={0.1 + i * 0.12}>
+              <GlassCard className="relative p-8 h-full transition-colors hover:bg-white/[0.09]">
+                <div className="mb-6 flex items-center gap-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#8B5CF6]/[0.18]">
+                    <step.icon className="h-6 w-6 text-[#8B5CF6]" />
+                  </div>
+                  <span className="text-4xl font-bold text-[#8B5CF6]/20">
+                    {step.number}
+                  </span>
                 </div>
-                <span className="text-4xl font-bold text-primary/20">
-                  {step.number}
-                </span>
-              </div>
-              <h3 className="mb-2 text-xl font-semibold text-foreground">
-                {step.title}
-              </h3>
-              <p className="text-muted-foreground">{step.description}</p>
-            </div>
+                <h3 className="mb-2 text-xl font-semibold text-[#F0F0F8]">
+                  {step.title}
+                </h3>
+                <p className="text-base leading-relaxed text-[#9898B0]">
+                  {step.description}
+                </p>
+              </GlassCard>
+            </Reveal>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

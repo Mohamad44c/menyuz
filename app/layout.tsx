@@ -1,9 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Syne, Inter } from "next/font/google";
 import "./globals.css";
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const syne = Syne({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-syne",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 const siteUrl = "https://menyuz.vercel.app";
 const siteTitle = "Menyuz — Digital QR Menus for Restaurants in Lebanon";
@@ -41,18 +52,9 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
+      { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
+      { url: "/icon-dark-32x32.png",  media: "(prefers-color-scheme: dark)"  },
+      { url: "/icon.svg",             type: "image/svg+xml"                   },
     ],
     apple: "/apple-icon.png",
   },
@@ -64,8 +66,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="font-sans antialiased">{children}</body>
+    <html lang="en" className={`${syne.variable} ${inter.variable}`}>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
