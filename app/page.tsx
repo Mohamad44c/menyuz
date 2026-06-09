@@ -2,6 +2,7 @@ import { Navbar } from "@/components/navbar";
 import { HeroSection } from "@/components/hero-section";
 import { HowItWorksSection } from "@/components/how-it-works-section";
 import { FeaturesSection } from "@/components/features-section";
+import { IndustriesSection } from "@/components/industries-section";
 import { PricingSection } from "@/components/pricing-section";
 import { Footer } from "@/components/footer";
 import { WhatsAppButton } from "@/components/whatsapp-button";
@@ -34,6 +35,7 @@ export default function Home() {
         <HeroSection />
         <HowItWorksSection />
         <FeaturesSection />
+        <IndustriesSection />
         <PricingSection />
         <Footer />
         <WhatsAppButton />
