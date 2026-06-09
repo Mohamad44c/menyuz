@@ -17,9 +17,9 @@ const inter = Inter({
 });
 
 const siteUrl = "https://menyuz.vercel.app";
-const siteTitle = "Menyuz — Digital QR Menus for Restaurants in Lebanon";
+const siteTitle = "Menyuz — Digital QR Menus & Catalogs for Businesses";
 const siteDescription =
-  "Beautiful, scannable QR menus for cafes and restaurants. One-time payment, no subscriptions. Made in Beirut.";
+  "Create beautiful, scannable QR menus and digital catalogs for restaurants, cafes, retail stores, and any business worldwide. Starter plan free — upgrade as you grow.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -28,11 +28,16 @@ export const metadata: Metadata = {
   keywords: [
     "QR menu",
     "digital menu",
-    "restaurant menu Lebanon",
-    "digital menu Beirut",
-    "QR code menu restaurant",
+    "QR code menu",
+    "digital catalog",
+    "online menu for restaurant",
     "online menu for cafe",
     "contactless menu",
+    "digital menu for retail",
+    "QR menu builder",
+    "scannable menu",
+    "multi-location menu",
+    "menu management software",
   ],
   robots: { index: true, follow: true },
   openGraph: {
@@ -42,7 +47,7 @@ export const metadata: Metadata = {
     siteName: "Menyuz",
     locale: "en_US",
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Menyuz — Digital QR Menus" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Menyuz — Digital QR Menus & Catalogs" }],
   },
   twitter: {
     card: "summary_large_image",
